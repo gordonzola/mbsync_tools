@@ -8,9 +8,9 @@ if __name__ == '__main__':
         acct = sys.argv[1]
         passwd = keyring.get_password('mbsync', acct)
         if passwd is None:
-            print("Account not found", file=sys.stderr)
+            print('Account not found', file=sys.stderr)
             sys.exit(1)
         print(passwd)
     except IndexError:
-        print("Argument required: account", file=sys.stderr)
+        print('Argument required: account', file=sys.stderr)
         sys.exit(1)

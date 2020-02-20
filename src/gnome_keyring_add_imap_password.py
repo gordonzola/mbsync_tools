@@ -5,7 +5,8 @@ import getpass
 
 
 if __name__ == '__main__':
-    username = input("Username: ")
-    password = getpass.getpass(prompt="Password: ")
+    username = input('Username: ')
+    password = getpass.getpass(prompt='Password: ')
 
-    keyring.set_password("mbsync", username, password)
+    keyring.set_password('mbsync', username, password)
+    print(f'Password saved for {username}')
